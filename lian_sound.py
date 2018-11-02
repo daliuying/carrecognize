@@ -119,7 +119,7 @@ for j=1:length(MFCC_feature)
     [~, i]=max(p);%取最大概率的模型作为识别，返回第i个模型
     display(sprintf('"%s" is recognized as "%s"', train_labels{j},char(unique_train_labels(i))))
     if ~strcmp(train_labels{j},char(unique_train_labels(i)))
-        errorcount=errorcount+1;%错误累计
+        errorcount=errorcount+1;%错误累计vv
     end;
 end;
 display(sprintf('train accuracy is %0.2f', (length(MFCC_feature)-errorcount)*100/length(MFCC_feature)));
